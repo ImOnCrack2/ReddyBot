@@ -3,7 +3,6 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    const args = message.content.split(' ').slice(1); // All arguments behind the command name with the prefix
       const msg = args.join(' '); // Amount of messages which should be deleted
 
       if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Sorry, but u cant do this.");
