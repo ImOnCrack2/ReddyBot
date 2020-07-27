@@ -57,10 +57,6 @@ client.on("message", async message =>{
 
     var args = messageArray.slice(1);
 
-    var options = {
-        active: activeSongs
-    };
-
     
     var commands = client.commands.get(command.slice(prefix.length));
 
