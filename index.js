@@ -10,7 +10,6 @@ const activities_list = [
     "wiki.justreddy.cf"
     ];
 
-const client = new discord.Client();
 client.login(process.env.token);
 client.commands = new discord.Collection()
 
