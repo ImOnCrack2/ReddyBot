@@ -60,7 +60,8 @@ client.on("message", async message =>{
     
     var commands = client.commands.get(command.slice(prefix.length));
 
-    if(commands) commands.run(client, message, args, options);
+    if(commands) commands.run(client, message, args);
+});
 
 client.on("guildMemberAdd", member => {
     var role = member.guild.roles.cache.get('723641547194892289');
@@ -69,7 +70,4 @@ client.on("guildMemberAdd", member => {
  
     // Rol toevoegen aan de persoon.
     member.roles.add(role);
-}
-)
-
 });
