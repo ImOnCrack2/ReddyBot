@@ -3,8 +3,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    const warns = JSON.parse(fs.readFileSync("./warning.json", "utf8"));
-      const args = message.content.slice(prefix.length).split(/ +/);
+    const warns = JSON.parse(fs.readFileSync("./warning.json", "utf8"));;
 
       // Nakijken als deze persoon wel toestemming heeft om dit te kunnen doen.
       if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Sorry, but u cant do that.");
