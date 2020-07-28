@@ -70,4 +70,16 @@ client.on("guildMemberAdd", member => {
  
     // Rol toevoegen aan de persoon.
     member.roles.add(role);
+
+
+    const channel = member.guild.channels.cache.get('736511768763039768');
+    var user = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+ 
+    if (!channel) return;
+
+    var welcomeEmbed = new discord.messageEmbed()
+    .setTitle("**Welcome to SaltCraft**")
+    .setDescription(`**Welcome ${user}** \n \n Welcome to SaltCraft, a beginning minecraft server \n For help type `/help`, if u found any problems/bugs or have a question, please open a ticket with `/new`. \n Make sure u read #📜︱rules to avoid a penalty. \n Thanks for joining and we hope u enjoy it here. \n \n Total members: ` + discord.GuildMember);
+ 
+    channel.send(welcomeEmbed);
 });
