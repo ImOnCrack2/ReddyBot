@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
 
     var giveawayEmbed = new discord.MessageEmbed()
     .setTitle("🎉 **GIVEAWAY** 🎉")
-    .setDescription(`React with 🎉 to enter \n Hosted by: ${message.author}`)
+    .setDescription(`React with 🎉 to enter \n Hosted by: ${message.author} \n Prize: ${item}`)
     .setFooter(`Ends at: ${dateEnd}`);
 
     var embedSend = await message.channel.send(giveawayEmbed);
