@@ -37,12 +37,9 @@ if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Sorry, 
  
         message.channel.send(embedPrompt).then(async msg => {
 
-            const no = message.guild.emojis.cache.find(emoji => emoji.name === 'CP_No');
-            const yes = message.guild.emojis.cache.find(emoji => emoji.name === 'CP_Yes');
-
 
  
-            var emoji = await promptMessage(msg, message.author, 30, [yes, no]);
+            var emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
  
  
             // We kijken dat het de gebruiker is die het als eerste heeft uitgevoerd.
@@ -60,7 +57,7 @@ if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Sorry, 
             //     });
  
  
-            if (emoji === yes) {
+            if (emoji === "✅") {
  
                 msg.delete();
  
@@ -70,7 +67,7 @@ if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Sorry, 
  
                 message.reply(embed);
  
-            } else if (emoji === no) {
+            } else if (emoji === "❌") {
  
                 msg.delete();
  

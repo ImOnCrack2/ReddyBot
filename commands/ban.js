@@ -36,10 +36,8 @@ module.exports.run = async (client, message, args) => {
  
         message.channel.send(embedPrompt).then(async msg => {
 
-            const no = message.guild.emojis.cache.find(emoji => emoji.name === 'CP_No');
-            const yes = message.guild.emojis.cache.find(emoji => emoji.name === 'CP_Yes');
  
-            var emoji = await promptMessage(msg, message.author, 30, [yes, no]);
+            var emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
  
  
             // We kijken dat het de gebruiker is die het als eerste heeft uitgevoerd.
@@ -57,7 +55,7 @@ module.exports.run = async (client, message, args) => {
             //     });
  
  
-            if (emoji === yes) {
+            if (emoji === "✅") {
  
                 msg.delete();
  
@@ -68,7 +66,7 @@ module.exports.run = async (client, message, args) => {
  
                 message.reply(embed);
  
-            } else if (emoji === no) {
+            } else if (emoji === "❌") {
  
                 msg.delete(embed);
  
