@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
     .setTitle("🎉 **GIVEAWAY** 🎉")
     .setDescription(`React with 🎉 to enter \n Hosted by: ${message.author} \n Prize: ${item}`)
     .setFooter(`Ends at:`)
-    .setTimestamp(dateEnd);
+    .setTimestamp(`${dateEnd}`);
 
     var embedSend = await message.channel.send(giveawayEmbed);
     embedSend.react("🎉");

@@ -8,12 +8,12 @@ module.exports.run = async (client, message, args) => {
  
         if (!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply("Sorry, but i dont have perms.");
  
-        if (!args[1]) return message.reply("Please specify a user.");
+        if (!args[0]) return message.reply("Please specify a user.");
  
-        if (!args[2]) return message.reply("Please specify a reason.");
+        if (!args[1]) return message.reply("Please specify a reason.");
 
  
-        var banUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
+        var banUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
  
         var reason = args.slice(2).join(" ");
  
