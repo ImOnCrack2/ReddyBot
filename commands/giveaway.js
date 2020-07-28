@@ -54,7 +54,7 @@ module.exports.run = async (client, message, args) => {
         }
 
         if(peopleReacted.length == 0){
-            return message,channel.send("Nobody won, so the bot won instead");
+            return message.channel.send("Nobody won, so the bot won instead");
         }
 
 
