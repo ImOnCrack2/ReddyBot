@@ -83,7 +83,7 @@ async function promptMessage(message, author, time, reactions) {
     for (const reaction of reactions) {
         await message.react(reaction);
     }
- 
+ //u
     // Als de emoji de juiste emoji is die men heeft opgegeven en als ook de auteur die dit heeft aangemaakt er op klikt
     // dan kunnen we een bericht terug sturen.
     const filter = (reaction, user) => reactions.includes(reaction.emoji.name) && user.id === author.id;
