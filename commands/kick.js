@@ -10,11 +10,11 @@ if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Sorry, 
  
         if (!message.guild.me.hasPermission("KICK_MEMBERS")) return message.reply("Sorry, but i dont have perms.");
  
-        if (!args[1]) return message.reply("Please specify a user.");
+        if (!args[0]) return message.reply("Please specify a user.");
  
-        if (!args[2]) return message.reply("Please specify a reason.");
+        if (!args[1]) return message.reply("Please specify a reason.");
  
-        var kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
+        var kickUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
  
         var reason = args.slice(2).join(" ");
  
