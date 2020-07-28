@@ -10,7 +10,6 @@ module.exports.run = async (client, message, args) => {
     var winnerCount;
 
     if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply("Sorry, but u cant use this");
-    if(winnerCount == 0) return message.reply("Bruh, i cant select 0 winners u dummy");
 
 
     winnerCount = args[0];
