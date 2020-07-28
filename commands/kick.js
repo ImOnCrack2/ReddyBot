@@ -37,7 +37,7 @@ if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Sorry, 
  
         message.channel.send(embedPrompt).then(async msg => {
  
-            var emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
+            var emoji = await promptMessage(msg, message.author, 30, ["737684276216332418", "737684298794139689"]);
  
  
             // We kijken dat het de gebruiker is die het als eerste heeft uitgevoerd.
@@ -55,7 +55,7 @@ if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Sorry, 
             //     });
  
  
-            if (emoji === "✅") {
+            if (emoji === "737684276216332418") {
  
                 msg.delete();
  
@@ -65,7 +65,7 @@ if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Sorry, 
  
                 message.reply(embed);
  
-            } else if (emoji === "❌") {
+            } else if (emoji === "737684298794139689") {
  
                 msg.delete();
  

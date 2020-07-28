@@ -36,7 +36,7 @@ module.exports.run = async (client, message, args) => {
  
         message.channel.send(embedPrompt).then(async msg => {
  
-            var emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
+            var emoji = await promptMessage(msg, message.author, 30, ["737684276216332418", "737684298794139689"]);
  
  
             // We kijken dat het de gebruiker is die het als eerste heeft uitgevoerd.
@@ -54,7 +54,7 @@ module.exports.run = async (client, message, args) => {
             //     });
  
  
-            if (emoji === "✅") {
+            if (emoji === "737684276216332418") {
  
                 msg.delete();
  
@@ -65,7 +65,7 @@ module.exports.run = async (client, message, args) => {
  
                 message.reply(embed);
  
-            } else if (emoji === "❌") {
+            } else if (emoji === "737684298794139689") {
  
                 msg.delete(embed);
  
